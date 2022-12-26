@@ -38,16 +38,7 @@ jobs:
         with:
           python-version: 3.11.1
 
-      - name: Load cached Poetry installation
-        id: cached-poetry
-        uses: actions/cache@v3
-        with:
-          path: ~/.local
-          key: poetry-0
-
-      - name: Install Poetry
-        if: steps.cached-poetry.outputs.cache-hit != 'true'
-        uses: abatilo/actions-poetry@v2
+      - uses: abatilo/actions-poetry@v2
 
       - name: Config python version
         run: |
