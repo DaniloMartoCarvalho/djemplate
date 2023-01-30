@@ -1,13 +1,5 @@
 <h1 align="center">Djemplate</h1>
 
-<p align="center">A template repository for a Django project</p>
-
-<p align="center">
-    <a href="https://opensource.org/licenses/MIT">
-        <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
-    </a>
-</p>
-
 <p align="center">
     <a href="https://github.com/DaniloMartoCarvalho/djemplate/actions/workflows/django.yml">
         <img src="https://github.com/DaniloMartoCarvalho/djemplate/actions/workflows/django.yml/badge.svg" alt="Django CI">
@@ -26,5 +18,21 @@
     </a>
     <a href="https://www.postgresql.org/">
         <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
+    </a>
+</p>
+
+I created this template repository to provide a Django project with the following startup configurations
+
+- Capture the values of some parameters defined in settings.py from environment variables.
+- Create a pre-commit
+- Create a Github Action
+- Create a docker-compose to use Postgres
+- Create base.html template with Bootstrap 5 tags and font-awesome
+
+
+##
+<p align="center">
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
     </a>
 </p>
