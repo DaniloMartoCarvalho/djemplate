@@ -4,8 +4,8 @@
     <a href="https://github.com/DaniloMartoCarvalho/djemplate/actions/workflows/django.yml">
         <img src="https://github.com/DaniloMartoCarvalho/djemplate/actions/workflows/django.yml/badge.svg" alt="Django CI">
     </a>
-    <a href="https://results.pre-commit.ci/latest/github/DaniloMartoCarvalho/djemplate/main">
-        <img src="https://results.pre-commit.ci/badge/github/DaniloMartoCarvalho/djemplate/main.svg" alt="pre-commit.ci status">
+    <a href="https://results.pre-commit.ci/latest/github/DaniloMartoCarvalho/djemplate/master">
+        <img src="https://results.pre-commit.ci/badge/github/DaniloMartoCarvalho/djemplate/master.svg" alt="pre-commit.ci status">
     </a>
 </p>
 
