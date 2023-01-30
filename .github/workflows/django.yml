@@ -1,4 +1,4 @@
-name: CI
+name: Django CI
 
 on:
   push:
@@ -14,9 +14,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_USER: postgres
-          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: githubci
+          POSTGRES_USER: githubci
+          POSTGRES_DB: githubci
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -28,7 +28,7 @@ jobs:
       SECRET_KEY: yzbz$ux+$om*9%!2yl1o6$%!_8d1y8!olb4bjc34li(!m6s#yo
       DEBUG: True
       ALLOWED_HOSTS: 127.0.0.1,localhost,0.0.0.0
-      DATABASE_URL: postgres://postgres:postgres@0.0.0.0:5432/postgres
+      DATABASE_URL: postgres://githubci:githubci@0.0.0.0:5432/githubci
 
     steps:
       - uses: actions/checkout@v3
@@ -38,22 +38,16 @@ jobs:
         with:
           python-version: 3.11.1
 
-      - uses: abatilo/actions-poetry@v2
-
-      - name: Config python version
+      - name: Installing poetry
         run: |
-          poetry env use 3.11.1
+          pip install --upgrade pip
+          pip install poetry
 
       - name: Installing the dependencies
         run: |
-          poetry install
-          # poetry export -f requirements.txt --without-hashes --with dev --output requirements.txt
-          # pip install -r requirements.txt
-
-      - name: Run makemigrations
-        run: |
-          poetry run python manage.py makemigrations
+          poetry export -f requirements.txt --without-hashes --with dev -o requirements.txt
+          pip install -r requirements.txt
 
       - name: Run Test
         run: |
-          poetry run python manage.py test
+          python project/manage.py test
