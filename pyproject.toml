@@ -1,21 +1,21 @@
 [tool.poetry]
 name = "djemplate"
-version = "0.1.0"
-description = "A"
+version = "1.1.0"
+description = "A template repository to Django project"
 authors = ["Danilo Marto de Carvalho <dmcarvalho@tutamail.com>"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.11.1"
-django = "^4.1.4"
-python-decouple = "^3.6"
+python = "^3.11"
+django = "^4.1.5"
+python-decouple = "^3.7"
 dj-database-url = "^1.2.0"
 psycopg2-binary = "^2.9.5"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^2.21.0"
+pre-commit = "^3.0.2"
 
 [build-system]
 requires = ["poetry-core"]
