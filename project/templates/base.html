@@ -1,10 +1,10 @@
-{% load i18n static %}<!DOCTYPE html>
+% load i18n static %}<!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>{% block title %}Djemplate{% endblock title %}</title>
+    <title>{% block title %}{% endblock title %} - Djemplate</title>
     {# ===== Favicons ===== #}
     <link rel="shortcut icon" href="https://res.cloudinary.com/dejjtt8yt/image/upload/v1672073964/djemplate/favicon_f0mvsy.ico" type="image/x-icon">
     {# ===== Bootstrap CSS ===== #}
