@@ -6,7 +6,6 @@ from django.test import TestCase
 
 class DatabaseTestCase(TestCase):
     def setUp(self) -> None:
-
         database = config("DATABASE_URL", cast=parse)
 
         self.connection = psycopg2.connect(
